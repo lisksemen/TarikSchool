@@ -208,6 +208,7 @@ li:nth-child(2n){
     font-size: 32px;
     line-height: 40px;
     font-weight: bold;
+    padding-top: 1rem;
     margin-bottom: 1rem;
     text-transform: uppercase;
     border-bottom: 4px solid black;
