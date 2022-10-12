@@ -33,7 +33,6 @@ body {
   font-family: "Proxima Nova", sans-serif;
   -webkit-font-smoothing: antialiased;
   margin: 0;
-  /*overflow-x: hidden;*/
 }
 
 
@@ -66,7 +65,7 @@ body {
   color: #2ab1da;
 }
 
-.header{
+.about_header{
   color: white;
   background: #666666;
   text-align: center;
@@ -76,7 +75,7 @@ body {
   text-transform: uppercase;
 }
 
-.title{
+.about_title{
   max-width: 320px;
   font-size: 72px;
   line-height: 60px;
@@ -115,11 +114,11 @@ body {
   text-indent: 3rem;
 }
 
-li{
+.about_li{
   list-style-type: none;
   display: flex;
 }
-li:nth-child(2n){
+.about_li:nth-child(2n){
   flex-direction: row-reverse;
 }
 
@@ -136,7 +135,7 @@ li:nth-child(2n){
   border-right: var(--BORDER) solid white;
 }
 
-.icon{
+.about_icon{
   height: 13vh;
   width: auto;
   margin: 5vh;
@@ -165,7 +164,7 @@ li:nth-child(2n){
 }
 
 @media screen and (max-width: 470px) {
-  .title {
+  .about_title {
     width: 290px;
   }
   .about_ul{
@@ -174,13 +173,13 @@ li:nth-child(2n){
   .container{
     border: 0;
   }
-  .icon{
+  .about_icon{
     margin: 5vw;
   }
 }
 
 @media  screen and (min-width: 650px) {
-  .header::before {
+  .about_header::before {
     content: "Наша ";
   }
 }
