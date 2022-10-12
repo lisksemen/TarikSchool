@@ -2,12 +2,6 @@
 html{
   scroll-behavior: smooth;
 }
-
-*,
-*::after
-*::before{
-
-
 * {
 
     margin: 0;
@@ -26,35 +20,32 @@ body {
   /*overflow-x: hidden;*/
 }
 
-article {
-  width: 100%;
-}
 
-a {
+.about_a {
   outline: none;
   text-decoration: none;
   padding: 2px 1px 0;
 }
 
-a:link {
+.about_a:link {
   color: #2ab1da;
 }
 
-a:visited {
+.about_a:visited {
   color: #2ab1da;
 }
 
-a:focus {
+.about_a:focus {
   border-bottom: 1px solid;
   background: #baecfc;
 }
 
-a:hover {
+.about_a:hover {
   border-bottom: 1px solid;
   background: #baecfc;
 }
 
-a:active {
+.about_a:active {
   background: #baecfc;
   color: #2ab1da;
 }
@@ -77,6 +68,8 @@ a:active {
   text-transform: uppercase;
   border-bottom: 8px solid black;
   margin-left: var(--BORDER);
+    margin-bottom: 5vh;
+    margin-top: 5vh;
 }
 
 #about{
@@ -296,7 +289,7 @@ html {
     text-decoration: none;
 }
 
-a:hover, a:active {
+.footer_a:hover, a:active {
     color: blue;
     text-decoration: none;
 }
@@ -356,7 +349,7 @@ a:hover, a:active {
     grid-template-columns: repeat(6,1.5fr);
 }
 
-a:hover,a:any-link{
+.footer_a:hover,.footer_a:any-link{
     color: cornsilk;
     text-decoration: none;
 }
