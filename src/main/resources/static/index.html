@@ -10,8 +10,8 @@
     <script src="https://kit.fontawesome.com/536c7d32f8.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Proxima+Nova:thin,regular,semibold,bold">
     <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <script src="main.js" defer></script>
 </head>
 <body>
 <article id = "about">
@@ -70,9 +70,60 @@
         <p class = "about_p listElement left">Розроблено нову конструкцію контактних водонагрівачів, що дають 20-30% економії електроенергії</p>
       </li>
     </ul>
-    <script src="main.js"></script>
   </div>
 </section>
 </article>
+  <footer class="footer">
+    <section class="section_footer" id="section_footer">
+        <h2 class="footer_h2">Зв'язатись з нами</h2>
+        <button class="button_show" type="button" value="showTextarea" id="btnQ" onclick="showQ()" style="display: none">&#10068;Задати питання</button>
+        <button class="button_show" type="button" value="showTextarea" id="btnP" onclick="showP()">&#9742;Замовити дзвінок</button>
+        <section class="section_contact">
+            <figure class="figure" >
+                <iframe class="iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                        src="https://maps.google.com/maps?width=100%25&amp;hl=en&amp;q=Kyiv%20Polytechnic%20Institute%20Park,%20Peremohy%20Avenue,%20Kyiv,%20Ukraine+(Science%20School)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+                    <a href="https://www.maps.ie/distance-area-calculator.html">distance maps</a>
+                </iframe>
+                <figcaption>Some address</figcaption>
+                <figcaption class="nowrap">Тел:+380994888099</figcaption>
+                <figcaption class="nowrap">E-mail:pupas@gmail.com</figcaption>
+            </figure>
+            <form class="formContact" method="post" id="formContact">
+                <input class="formContact_input" type="name" name="username" placeholder="👤ПІБ">
+                <input class="formContact_input" type="tel" name="userphone" placeholder="📱+38**********">
+                <input class="formContact_input" type="email" name="useremail" placeholder="✉Email">
+                <textarea class="formContext_textarea" name="message" placeholder="✎Повідомлення"></textarea>
+                <button class="button_submit" type="submit" form="formContact" value="Submit">&#9745;Відправити</button>
+            </form>
+            <form method="post" class="form_feedback" id="formFeedback">
+                <input class="formFeedback_input" type="name" name="username" placeholder="👤ПІБ" required>
+                <input class="formFeedback_input" type="tel" name="userphone" placeholder="📱+38**********" required>
+                <button class="button_submit" type="submit" form="formFeedback" value="Submit">&#9745;Відправити</button>
+            </form>
+        </section>
+        <div class="container_icons">
+            <a href=""><img alt="facebook" class="social_icon" src="images/facebook_icon.png"></a>
+            <a href=""><img alt="telegram" class="social_icon" src="images/telegram_icon.png"></a>
+            <a href=""><img alt="instagram" class="social_icon" src="images/instagram_icon.png"></a>
+            <a href=""><img alt="viber" class="social_icon" src="images/viber_icon.png"></a>
+        </div>
+    </section>
+    <section class="footer_bottom">
+        <section class="bottom_menu center">
+            <a href="">Головна</a>
+            <a href="">Історія</a>
+            <a href="">Команда</a>
+            <a href="">Проекти</a>
+            <a href="">Показники результативності</a>
+            <a href="">Послуги</a>
+        </section>
+        <p class="center">
+            <span class="nowrap">Copyright &copy; 2022</span>
+            <br>
+            <span>Designed by Tarik Systems</span>
+        </p>
+        <a href="#section_footer" class="arrow center">︿</a>
+    </section>
+</footer>
 </body>
 </html>
