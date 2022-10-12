@@ -1,16 +1,32 @@
-
-html{
-  scroll-behavior: smooth;
+/*Utils*/
+.nowrap{
+    white-space: nowrap;
 }
-* {
+.center{
+    text-align: center;
+}
 
+/*General styles*/
+
+:root {
+    --W: 30vw;
+    --BG: lightgrey;
+    --M: 5px 0;
+    /*Border radius*/
+    --BR: 5px;
+    /*Border*/
+    --BORDER: 7vw;
+    --B: solid grey 2px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-:root{
-  --BORDER: 7vw;
 }
 
 body {
@@ -169,28 +185,6 @@ li:nth-child(2n){
   }
 }
 
-/*Utils*/
-.nowrap{
-    white-space: nowrap;
-}
-.center{
-    text-align: center;
-}
-
-/*General styles*/
-
-:root {
-    --B: solid grey 2px;
-    --W: 30vw;
-    --BG: lightgrey;
-    --M: 5px 0;
-    /*Border radius*/
-    --BR: 5px;
-}
-
-html {
-    scroll-behavior: smooth;
-}
 
 /* Footer */
 
