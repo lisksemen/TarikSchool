@@ -12,7 +12,17 @@ public class MailService {
 
     private SimpleMailMessage mailMessage;
 
-    public void sendFeedbackMail (String email, String phone, String name, String message) {
+    public void sendFeedbackMail(String email, String phone, String name, String message) {
+        Thread mailThread = new Thread(() -> feedbackMailMethod(email, phone, name, message));
+        mailThread.start();
+    }
+
+    public void sendCallbackMail(String name, String phone) {
+        Thread mailThread = new Thread(() -> callbackMailMethod(name, phone));
+        mailThread.start();
+    }
+
+    private void feedbackMailMethod(String email, String phone, String name, String message) {
         mailMessage.setSubject("Feedback form submission");
         mailMessage.setText("Form has submitted recently!\n" +
                 "Name: " + name + "\n" +
@@ -24,7 +34,7 @@ public class MailService {
         mailSender.send(mailMessage);
     }
 
-    public void sendCallbackMail (String name, String phone) {
+    private void callbackMailMethod(String name, String phone) {
         mailMessage.setSubject("Callback form submission");
         mailMessage.setText("Form has submitted recently!\n" +
                 "Name: " + name + "\n" +
@@ -33,4 +43,5 @@ public class MailService {
 
         mailSender.send(mailMessage);
     }
+
 }
