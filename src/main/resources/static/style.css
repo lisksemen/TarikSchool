@@ -387,7 +387,7 @@ body {
 
 .social_icon {
     border-radius: var(--BR);
-    width: 4vw;
+    width: clamp(1rem, 3vw, 1.5rem);
     margin: 5px 10px;
     max-width: 40px;
 
