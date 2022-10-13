@@ -27,6 +27,13 @@ function showQ() {
 
 window.onload = () => {
     const slider = new Slider(".quotes > .slider");
+
+    document.querySelectorAll("form").forEach((el) => {
+        el.addEventListener("submit", (e) => {
+            e.preventDefault();
+            sendForm(el);
+        });
+    });
 }
 
 class Slider {
@@ -131,4 +138,16 @@ class Slider {
     bindHeight() {
         this.target.querySelector(".slider-container").style.height = this.target.querySelector(".slider-item.active").offsetHeight + "px";
     }
+}
+
+function sendForm(form) {
+    if (!(form instanceof Element)) throw new Error("Form must be a document element");
+    fetch(form.action, {
+        method: form.method,
+        body: new FormData(form)
+    }).then((res) => {
+        alert(res.ok ? "Успішно відправлено." : "Сталась помилка. Перевірте введені дані.")
+        form.querySelector("button").disabled = false;
+    });
+    form.querySelector("button").disabled = true;
 }
