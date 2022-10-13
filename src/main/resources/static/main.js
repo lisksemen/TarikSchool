@@ -1,6 +1,5 @@
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-        console.log(entry);
         if (entry.isIntersecting && !entry.target.classList.contains("shown")) {
             entry.target.classList.add("show");
             entry.target.classList.add("shown");
@@ -45,17 +44,14 @@ class Slider {
 
     constructor(target) {
         target = document.querySelector(target);
-        if (!(target instanceof Element)) throw new Error("slider target must be a document element");
+        if (!(target instanceof Element)) throw new Error("Slider target must be a document element");
         this.target = target;
         this.size = this.target.querySelectorAll(".slider-container .slider-item").length;
 
         this.bindControls();
         this.appendPagination();
         this.bindHeight();
-        target.querySelector(".slider-container").addEventListener("pointerdown", (e) => this.touchDown(e), true);
-        target.querySelector(".slider-container").addEventListener("pointermove", (e) => this.touchMove(e), true);
-        target.querySelector(".slider-container").addEventListener("pointerup", (e) => this.touchUp(e), true);
-        window.addEventListener("resize", () => {this.bindHeight()});
+        this.updateHeight();
     }
 
     touchDown(e) {
@@ -85,21 +81,21 @@ class Slider {
     }
 
     next() {
-        if (this.current >= this.target.querySelectorAll(".slider-container .slider-item").length-1){
+        if (this.current >= this.size-1){
             this.switchTo(0);
         } else this.switchTo(this.current + 1);
     }
 
     previous() {
         if (this.current <= 0) {
-            this.switchTo(this.target.querySelectorAll(".slider-container .slider-item").length-1);
+            this.switchTo(this.size-1);
         } else this.switchTo(this.current - 1);
     }
 
     switchTo(page) {
         this.target.querySelector(".slider-item.active").classList.remove("active");
         this.target.querySelector(`.slider-item[data-page="${page}"]`).classList.add("active");
-        this.bindHeight();
+        this.updateHeight();
         this.target.querySelector(".slider-button.active").classList.remove("active");
         this.target.querySelector(`.slider-button[data-page="${page}"]`).classList.add("active");
 
@@ -127,6 +123,10 @@ class Slider {
     }
 
     bindControls() {
+        this.target.querySelector(".slider-container").addEventListener("pointerdown", (e) => this.touchDown(e), true);
+        this.target.querySelector(".slider-container").addEventListener("pointermove", (e) => this.touchMove(e), true);
+        this.target.querySelector(".slider-container").addEventListener("pointerup", (e) => this.touchUp(e), true);
+
         this.target.querySelectorAll(".slider-buttons .slider-button").forEach((el) => {
             el.addEventListener("click", (e) => {
                 let page = +e.target.getAttribute("data-page");
@@ -136,6 +136,10 @@ class Slider {
     }
 
     bindHeight() {
+        window.addEventListener("resize", () => {this.updateHeight()});
+    }
+
+    updateHeight() {
         this.target.querySelector(".slider-container").style.height = this.target.querySelector(".slider-item.active").offsetHeight + "px";
     }
 }
