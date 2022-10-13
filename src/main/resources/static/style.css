@@ -579,6 +579,16 @@ article#team > section.main > .container > .content {
     background-size: cover;
 }
 
+.avatar#semen {
+    background: url("images/semen.png") no-repeat center;
+    background-size: cover;
+}
+
+.avatar#mazur {
+    background: url("images/mazur.png") no-repeat center;
+    background-size: cover;
+}
+
 .team-card > .header > .socials {
     display: flex;
     gap: 10px;
