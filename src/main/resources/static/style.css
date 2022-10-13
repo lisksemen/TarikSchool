@@ -43,27 +43,12 @@ body {
     padding: 2px 1px 0;
 }
 
-.about_a:link {
-    color: #2ab1da;
-}
-
-.about_a:visited {
-    color: #2ab1da;
-}
-
-.about_a:focus {
-    border-bottom: 1px solid;
-    background: #baecfc;
+.about_a:any-link {
+    color: #666666;
 }
 
 .about_a:hover {
-    border-bottom: 1px solid;
-    background: #baecfc;
-}
-
-.about_a:active {
-    background: #baecfc;
-    color: #2ab1da;
+    color: #EBEBEB;
 }
 
 .about_header {
@@ -100,11 +85,11 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.397);
-    color: rgb(255, 210, 0);
+    color: black;
 }
 
 #about_buran_color {
-    background-color: rgba(88, 0, 122, 0.431);
+    background-color: rgba(64, 185, 221, 0.584);
     padding: var(--BORDER);
 }
 
