@@ -35,6 +35,11 @@ window.onload = () => {
     });
 }
 
+function showVideo() {
+    document.getElementById("video_click").classList.add("click_button_hide")
+    document.getElementById("video").classList.add("video_show")
+}
+
 
 function showDropdown() {
     document.getElementById("myDropdown").classList.toggle("show_dropdown");
