@@ -20,7 +20,7 @@
 </head>
 
 <body>
-<article>
+<article id="navbar">
     <div class="navbar">
         <div id="navbar-brand">
             <a href="https://tariktairova.github.io/tarik/">
@@ -55,6 +55,28 @@
         <a href='#services'>Послуги</a>
         <a href='#about'>Про нас</a>
     </div>
+</article>
+
+<article id="main">
+    <div class="video_click" id="video_click">
+        <div class="video_click_button" onclick="showVideo()">
+            <img src="images/play-video-button.png" alt="play">
+            <div class="video_click_text">
+                <div>
+                    <span>Let me show you Tarik</span>
+                </div>
+                <div>
+                    <p>Click to play video</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <iframe id="video" class="video" src="https://www.youtube.com/embed/EoQwsa5ldYo" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+
+    </iframe>
 </article>
 
 <article id="team">

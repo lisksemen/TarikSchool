@@ -34,6 +34,7 @@ html {
 body {
     -webkit-font-smoothing: antialiased;
     margin-top: 50px;
+    height: 100%;
 }
 
 .about_a {
@@ -259,7 +260,7 @@ body {
 .navbar {
     border: 4px solid black;
     width: 100%;
-    height: 50px;
+    height: 7%;
     position: fixed;
     top: 0;
     background-color: black;
@@ -387,6 +388,72 @@ body {
 .change .bar3 {
     transform: translate(0, -11px) rotate(45deg);
 }
+#main {
+    height: 70%;
+}
+
+.video {
+    display: none;
+}
+
+#video {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border: none;
+}
+.video_click {
+    height: 100%;
+    position: relative;
+}
+
+.video_click img {
+    width: 13%;
+    height: 13%;
+    margin-right: 2%;
+    margin-top: 2%;
+    display: inline-block;
+}
+
+.video_click_text {
+    display: inline-block;
+
+}
+
+.video_click_text span {
+    font: inherit;
+    font-size: 50px;
+    width: 85%;
+}
+.video_click_text div {
+    text-align: left;
+    width: 100%;
+}
+
+.video_click_button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 65%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+}
+
+.video_click_button:hover .video_click_button:active {
+
+}
+
+.click_button_hide {
+    display: none;
+}
+
+.video_show {
+    display: block;
+}
+
 
 .footer_bottom {
     display: grid;
@@ -789,6 +856,7 @@ ol, ul {
 
 html {
     font-family: "Oswald", sans-serif;
+    height: 100%;
 }
 
 .perfomance {
