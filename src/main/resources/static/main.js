@@ -35,6 +35,31 @@ window.onload = () => {
     });
 }
 
+
+function showDropdown() {
+    document.getElementById("myDropdown").classList.toggle("show_dropdown");
+    changeBar();
+}
+
+window.onclick = function (event) {
+    if (!event.target.matches('.dropbtn') && !event.target.matches('.dropdown_container')
+        && !event.target.matches('.bar1') && !event.target.matches('.bar2') && !event.target.matches('.bar3')) {
+        const dropdowns = document.getElementsByClassName("dropdown-content");
+        let i;
+        for (i = 0; i < dropdowns.length; i++) {
+            const openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show_dropdown')) {
+                openDropdown.classList.remove('show_dropdown');
+            }
+        }
+        document.getElementById("dropdown_button").classList.remove("change")
+    }
+}
+
+function changeBar() {
+    document.getElementById("dropdown_button").classList.toggle("change");
+}
+
 class Slider {
     target;
     startShift = 0;
@@ -65,7 +90,7 @@ class Slider {
             if (Math.abs(shift) < 50) {
                 this.target.querySelector(".slider-container .slider-item.active").style.transform = `translateX(${shift}px)`;
             } else {
-                this.target.querySelector(".slider-container .slider-item.active").style.transform = `translateX(${shift>0?"":"-"}}50px)`;
+                this.target.querySelector(".slider-container .slider-item.active").style.transform = `translateX(${shift > 0 ? "" : "-"}}50px)`;
             }
         }
     }
@@ -81,14 +106,14 @@ class Slider {
     }
 
     next() {
-        if (this.current >= this.size-1){
+        if (this.current >= this.size - 1) {
             this.switchTo(0);
         } else this.switchTo(this.current + 1);
     }
 
     previous() {
         if (this.current <= 0) {
-            this.switchTo(this.size-1);
+            this.switchTo(this.size - 1);
         } else this.switchTo(this.current - 1);
     }
 
@@ -136,7 +161,9 @@ class Slider {
     }
 
     bindHeight() {
-        window.addEventListener("resize", () => {this.updateHeight()});
+        window.addEventListener("resize", () => {
+            this.updateHeight()
+        });
     }
 
     updateHeight() {
