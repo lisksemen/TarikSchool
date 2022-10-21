@@ -422,7 +422,7 @@ body {
 
 .video_click_text span {
     font: inherit;
-    font-size: 50px;
+    font-size: 300%;
     width: 85%;
 }
 .video_click_text div {
