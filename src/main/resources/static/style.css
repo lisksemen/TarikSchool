@@ -558,7 +558,7 @@ article#team > section {
     width: 100%;
 }
 
-article#team > section > .dropdown_container {
+article#team > section > .container {
     max-width: 1200px;
     margin: 30px 15px;
 }
@@ -568,7 +568,7 @@ article#team > section.header {
     background: #666666;
 }
 
-article#team > section.header > .dropdown_container {
+article#team > section.header > .container {
     text-align: center;
 }
 
@@ -576,7 +576,7 @@ article#team > section.main {
     margin-top: 100px;
 }
 
-article#team > section.main > .dropdown_container > .title {
+article#team > section.main > .container > .title {
     max-width: 370px;
     width: 100%;
     font-size: 72px;
@@ -586,7 +586,7 @@ article#team > section.main > .dropdown_container > .title {
     border-bottom: 8px solid black;
 }
 
-article#team > section.main > .dropdown_container > .content {
+article#team > section.main > .container > .content {
     margin-top: 75px;
 }
 
