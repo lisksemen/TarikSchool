@@ -74,7 +74,7 @@ body {
 }
 
 #about {
-    margin-bottom: 0vh;
+    margin-bottom: 0;
 }
 
 #about_buran_img {
@@ -156,7 +156,7 @@ body {
     }
 
     .about_ul {
-        padding-inline-start: 0px;
+        padding-inline-start: 0;
     }
 
     .about_container {
@@ -288,7 +288,7 @@ body {
     text-align: center;
 }
 
-#main_a, #about_a, #history_button, #team_a, #projects_a, #services_a {
+#main_a, #about_a, #history_button, #team_a, #projects_a, #services_a, #contacts_a {
     border: 2px black;
     background-color: black;
     width: 150px;
@@ -301,7 +301,7 @@ body {
 }
 
 
-#main_txt, #about_txt, #history_txt, #team_txt, #projects_txt, #services_txt {
+#main_txt, #about_txt, #history_txt, #team_txt, #projects_txt, #services_txt, #contacts_a {
     font-weight: bold;
     font-size: 20px;
     font-family: Oswald, sans-serif;
@@ -345,7 +345,7 @@ body {
     background-color: #f1f1f1;
     min-width: 160px;
     overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
@@ -372,7 +372,7 @@ body {
 .bar1, .bar2, .bar3 {
     width: 35px;
     height: 5px;
-    background-color: #333;
+    background-color: white;
     margin: 6px 0;
     transition: 0.4s;
 }
@@ -727,7 +727,7 @@ article#team > section.main > .container > .content {
     font-size: 25px;
     text-decoration: none;
     color: white;
-    font-family: "FontAwesome";
+    font-family: "FontAwesome", sans-serif;
 }
 
 .team-card > .header > .socials > .twitter:after {
@@ -844,7 +844,6 @@ article#team > section.main > .container > .content {
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
     font: inherit;
     vertical-align: baseline;
 }
@@ -1126,7 +1125,7 @@ html {
     }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1050px) {
     #navbar-brand {
         display: none;
     }
@@ -1136,7 +1135,7 @@ html {
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
     .navbar_buttons {
         display: none;
     }
