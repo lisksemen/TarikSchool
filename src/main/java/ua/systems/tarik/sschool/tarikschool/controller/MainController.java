@@ -1,15 +1,21 @@
 package ua.systems.tarik.sschool.tarikschool.controller;
 
 import lombok.AllArgsConstructor;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import ua.systems.tarik.sschool.tarikschool.service.MailService;
+import ua.systems.tarik.sschool.tarikschool.service.RegexService;
 
 @Controller
 @AllArgsConstructor
 public class MainController {
+
+    RegexService regexService;
+
     MailService mailService;
 
     @GetMapping("/")
@@ -18,30 +24,29 @@ public class MainController {
     }
 
     @PostMapping("/contact")
-    public String proceedContactFormAndShowIndex(@RequestParam String username,
-                                                 @RequestParam("userphone") String userPhone,
-                                                 @RequestParam("useremail") String userEmail,
-                                                 @RequestParam String message) {
+    public ResponseEntity<?> proceedContactFormAndShowIndex(@RequestParam String username,
+                                                            @RequestParam("userphone") String userPhone,
+                                                            @RequestParam("useremail") String userEmail,
+                                                            @RequestParam String message) {
 
-        System.out.println("Username: " + username + "\n" +
-                "UserPhone: " + userPhone + "\n" +
-                "UserEmail: " + userEmail + "\n" +
-                "Message: " + message
-        );
-        mailService.sendFeedbackMail(userEmail, userPhone, username, message);
-        return "redirect:/";
+
+        if (regexService.isEmail(userEmail) && regexService.isPhone(userPhone)) {
+            mailService.sendFeedbackMail(userEmail, userPhone, username, message);
+            return new ResponseEntity<>(HttpStatus.OK);
+        }
+
+        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
 
     @PostMapping("/callback")
-    public String proceedCallBackFormAndShowIndex(@RequestParam String username,
-                                                  @RequestParam("userphone") String userPhone) {
+    public ResponseEntity<?> proceedCallBackFormAndShowIndex(@RequestParam String username,
+                                                             @RequestParam("userphone") String userPhone) {
 
-        System.out.println("Username: " + username + "\n" +
-                "UserPhone: " + userPhone + "\n"
-        );
+        if (regexService.isPhone(userPhone)) {
+            mailService.sendCallbackMail(username, userPhone);
+            return new ResponseEntity<>(HttpStatus.OK);
+        }
 
-        mailService.sendCallbackMail(username, userPhone);
-
-        return "redirect:/";
+        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
     }
 }
