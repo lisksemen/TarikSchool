@@ -323,6 +323,7 @@ body {
 }
 
 .dropbtn {
+    display: none;
     color: white;
     padding: 2px;
     height: 46px;
@@ -336,7 +337,7 @@ body {
 
 .dropdown {
     position: relative;
-    display: inline-block;
+    display: none;
 }
 
 .dropdown-content {
@@ -1140,7 +1141,7 @@ html {
         display: none;
     }
 
-    .dropdown_button {
+    .dropdown {
         display: inline-block;
     }
 }
