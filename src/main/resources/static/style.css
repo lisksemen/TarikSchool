@@ -103,6 +103,7 @@ body {
 .about_li {
     list-style-type: none;
     display: flex;
+    border-bottom: 1px solid #EBEBEB;
 }
 
 .about_li:nth-child(2n) {
@@ -123,7 +124,7 @@ body {
 }
 
 .about_icon {
-    height: 13vh;
+    height: 10vh;
     width: auto;
     margin: 5vh;
     border-radius: 15%;
@@ -893,6 +894,7 @@ html {
 #perfomance_data {
     display: flex;
     justify-content: space-around;
+    margin-top: 7vw;
 }
 
 #perfomance_data h3 {
