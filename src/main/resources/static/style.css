@@ -567,7 +567,7 @@ article#team > section.main {
 }
 
 .title {
-    max-width: 370px;
+    max-width: 280px;
     width: 100%;
     font-size: 3em;
     line-height: 60px;
@@ -580,6 +580,16 @@ article#team > section.main {
     margin-left: calc(7vw - 15px);
 }
 
+#footer_h2{
+    padding-top: 50px;
+    margin-bottom: 20px;
+}
+
+#about_h2 {
+    margin-left: var(--BORDER);
+    margin-bottom: 50px;
+    padding-top: 50px;
+}
 
 .slider > .slider-container {
     /*noinspection CssInvalidPropertyValue*/
@@ -1039,12 +1049,6 @@ html {
 .side_text {
     padding: 10px;
     border-bottom: 1px solid #EBEBEB;
-}
-
-#about_h2 {
-    margin-left: var(--BORDER);
-    margin-bottom: 50px;
-    padding-top: 50px;
 }
 
 .footer_company{
