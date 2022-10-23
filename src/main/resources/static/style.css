@@ -177,16 +177,14 @@ body {
 /* Footer */
 .footer {
     background-color: var(--BG);
-    font-family: "Proxima Nova", sans-serif;
-    -webkit-font-smoothing: antialiased;
 }
 
 .section_footer {
     position: relative;
     border-left: 13vw;
     border-right: 13vw;
-    margin-left: 13vw;
-    margin-right: 13vw;
+    margin-left: 7vw;
+    margin-right: 7vw;
 }
 
 .footer_h2 {
@@ -557,7 +555,6 @@ article#team > section {
 }
 
 article#team > section > .container {
-    max-width: 1200px;
     margin: 30px 15px;
 }
 
@@ -574,19 +571,20 @@ article#team > section.main {
     margin-top: 100px;
 }
 
-article#team > section.main > .container > .title {
+.title {
     max-width: 370px;
     width: 100%;
-    font-size: 72px;
+    font-size: 3em;
     line-height: 60px;
     font-weight: bold;
     text-transform: uppercase;
     border-bottom: 8px solid black;
 }
 
-article#team > section.main > .container > .content {
-    margin-top: 75px;
+#team_h2 {
+    margin-left: calc(7vw - 15px);
 }
+
 
 .slider > .slider-container {
     /*noinspection CssInvalidPropertyValue*/
@@ -660,6 +658,7 @@ article#team > section.main > .container > .content {
 }
 
 .team-cards {
+    padding: 7vw;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
@@ -1044,6 +1043,10 @@ html {
 .side_text {
     padding: 10px;
     border-bottom: 1px solid #EBEBEB;
+}
+
+#about_h2 {
+    margin-left: 7vw;
 }
 
 @media (max-width: 936px) {
