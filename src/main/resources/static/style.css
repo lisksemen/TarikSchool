@@ -560,6 +560,7 @@ article#team > section > .container {
 }
 
 article#team > section.header {
+    padding-top: 50px;
     color: white;
     background: #666666;
 }
@@ -1048,7 +1049,13 @@ html {
 }
 
 #about_h2 {
-    margin-left: 7vw;
+    margin-left: var(--BORDER);
+    margin-down: 50px;
+    padding-top: 50px;
+}
+
+.footer_company{
+    margin: var(--M) 0;
 }
 
 @media (max-width: 936px) {
