@@ -77,7 +77,6 @@ class Slider {
         if (Math.abs(this.startShift - e.screenX) > 20)
             this.startShift - e.screenX > 0 ? this.next() : this.previous();
         this.target.querySelector(".slider-container .slider-item.active").style.transform = "translateX(0px)";
-
     }
 
     next() {
