@@ -563,7 +563,7 @@ article#team > section.header > .container {
 }
 
 article#team > section.main {
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .title {
@@ -852,7 +852,7 @@ html {
 
 .perfomance {
     background-color: #EBEBEB;
-    padding: 7vw;
+    padding:50px 7vw;
 }
 
 .article {
@@ -924,7 +924,7 @@ html {
 }
 
 .service_wrapper {
-    padding: 7vw;
+    padding: 50px 7vw;
 }
 
 .service {
@@ -1043,7 +1043,7 @@ html {
 
 #about_h2 {
     margin-left: var(--BORDER);
-    margin-down: 50px;
+    margin-bottom: 50px;
     padding-top: 50px;
 }
 
@@ -1114,7 +1114,9 @@ html {
         width: 80px;
         height: 80px;
     }
-
+    #team_h2{
+        margin-left: 7vw;
+    }
     .article {
         width: 90%;
     }
