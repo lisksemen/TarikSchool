@@ -297,26 +297,20 @@ body {
 }
 
 
-#main_txt, #about_txt, #history_txt, #team_txt, #projects_txt, #services_txt, #contacts_a {
+#main_txt, #about_txt, #history_txt, #team_txt, #projects_txt, #services_txt, #contacts_txt {
     font-weight: bold;
     font-size: 20px;
     font-family: Oswald, sans-serif;
     color: #e8e8e8;
 }
 
-#main_txt:hover, #about_txt:hover, #history_txt:hover, #team_txt:hover, #projects_txt:hover, #services_txt:hover {
+#main_txt:hover, #about_txt:hover, #history_txt:hover, #team_txt:hover, #projects_txt:hover, #services_txt:hover, #contacts_txt:hover {
     color: #42b8dd;
     font-weight: bold;
     font-size: 20px;
     font-family: Oswald, sans-serif;
 }
 
-#main_txt:active, #about_txt:active, #history_txt:active, #team_txt:active, #projects_txt:active, #services_txt:active {
-    color: blue;
-    font-weight: bold;
-    font-size: 20px;
-    font-family: Oswald, sans-serif;
-}
 
 .dropbtn {
     display: none;
