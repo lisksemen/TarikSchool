@@ -653,7 +653,7 @@ article#team > section.main {
 }
 
 .team-cards {
-    padding: 7vw;
+    padding: 4vw 7vw;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
@@ -888,7 +888,7 @@ html {
 #perfomance_data {
     display: flex;
     justify-content: space-around;
-    margin-top: 7vw;
+    margin-top: 3vw;
 }
 
 #perfomance_data h3 {
