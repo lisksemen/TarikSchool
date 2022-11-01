@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import ua.systems.tarik.sschool.tarikschool.service.MailService;
 import ua.systems.tarik.sschool.tarikschool.service.RegexService;
+import ua.systems.tarik.sschool.tarikschool.service.TelegramService;
 
 @Controller
 @AllArgsConstructor
@@ -17,6 +18,8 @@ public class MainController {
     RegexService regexService;
 
     MailService mailService;
+
+    TelegramService telegramService;
 
     @GetMapping("/")
     public String showIndex() {
@@ -31,7 +34,7 @@ public class MainController {
 
 
         if (regexService.isEmail(userEmail) && regexService.isPhone(userPhone)) {
-            mailService.sendFeedbackMail(userEmail, userPhone, username, message);
+            telegramService.sendFeedbackMessage(userEmail, userPhone, username, message);
             return new ResponseEntity<>(HttpStatus.OK);
         }
 
@@ -43,7 +46,7 @@ public class MainController {
                                                              @RequestParam("userphone") String userPhone) {
 
         if (regexService.isPhone(userPhone)) {
-            mailService.sendCallbackMail(username, userPhone);
+            telegramService.sendCallbackMessage(username, userPhone);
             return new ResponseEntity<>(HttpStatus.OK);
         }
 
