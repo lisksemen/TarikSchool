@@ -16,6 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css"/>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
     <script src="main.js" defer></script>
 </head>
 
@@ -491,6 +492,10 @@
                 <input class="formContact_input" type="tel" name="userphone" placeholder="📱+38**********">
                 <input class="formContact_input" type="email" name="useremail" placeholder="✉Email">
                 <textarea class="formContext_textarea" name="message" placeholder="✎Повідомлення"></textarea>
+                <div class="g-recaptcha col-sm-5"
+                     th:attr="data-sitekey=${@captchaConfig.getSite()}"></div>
+                <span id="captchaError" class="alert alert-danger col-sm-4"
+                      style="display:none"></span>
                 <button class="button_submit" form="formContact"
                         value="Submit">&#9745;Відправити
                 </button>
@@ -499,6 +504,10 @@
                 <input class="formFeedback_input" type="name" name="username" placeholder="👤ПІБ" required>
                 <input class="formFeedback_input" type="tel" name="userphone" placeholder="📱+38**********"
                        required>
+                <div class="g-recaptcha col-sm-5"
+                     th:attr="data-sitekey=${@captchaConfig.getSite()}"></div>
+                <span id="captchaError2" class="alert alert-danger col-sm-4"
+                      style="display:none"></span>
                 <button class="button_submit" form="formFeedback" value="Submit">&#9745;Відправити
                 </button>
             </form>
