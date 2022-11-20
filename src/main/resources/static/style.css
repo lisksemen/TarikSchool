@@ -378,6 +378,7 @@ body {
 .change .bar3 {
     transform: translate(0, -11px) rotate(45deg);
 }
+
 #main {
     height: 70%;
 }
@@ -392,6 +393,7 @@ body {
     position: relative;
     border: none;
 }
+
 .video_click {
     height: 100%;
     position: relative;
@@ -415,6 +417,7 @@ body {
     font-size: 300%;
     width: 85%;
 }
+
 .video_click_text div {
     text-align: left;
     width: 100%;
@@ -580,7 +583,7 @@ article#team > section.main {
     margin-left: calc(7vw - 15px);
 }
 
-#footer_h2{
+#footer_h2 {
     padding-top: 50px;
     margin-bottom: 20px;
 }
@@ -862,7 +865,7 @@ html {
 
 .perfomance {
     background-color: #EBEBEB;
-    padding:50px 7vw;
+    padding: 50px 7vw;
 }
 
 .article {
@@ -1051,7 +1054,7 @@ html {
     border-bottom: 1px solid #EBEBEB;
 }
 
-.footer_company{
+.footer_company {
     margin: var(--M) 0;
 }
 
@@ -1118,9 +1121,11 @@ html {
         width: 80px;
         height: 80px;
     }
-    #team_h2{
+
+    #team_h2 {
         margin-left: 7vw;
     }
+
     .article {
         width: 90%;
     }

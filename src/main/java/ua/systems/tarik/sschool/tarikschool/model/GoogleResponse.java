@@ -32,8 +32,8 @@ public class GoogleResponse {
     @JsonIgnore
     public boolean hasClientError() {
         ErrorCode[] errors = ErrorCode.values();
-        for(ErrorCode error : errors) {
-            switch(error) {
+        for (ErrorCode error : errors) {
+            switch (error) {
                 case InvalidResponse:
                 case MissingResponse:
                     return true;
@@ -43,14 +43,14 @@ public class GoogleResponse {
     }
 
     enum ErrorCode {
-        MissingSecret,     InvalidSecret,
-        MissingResponse,   InvalidResponse;
+        MissingSecret, InvalidSecret,
+        MissingResponse, InvalidResponse;
 
-        private static final Map<String, ErrorCode> errorsMap = new HashMap<String, ErrorCode>(4);
+        private static final Map<String, ErrorCode> errorsMap = new HashMap<>(4);
 
         static {
-            errorsMap.put("missing-input-secret",   MissingSecret);
-            errorsMap.put("invalid-input-secret",   InvalidSecret);
+            errorsMap.put("missing-input-secret", MissingSecret);
+            errorsMap.put("invalid-input-secret", InvalidSecret);
             errorsMap.put("missing-input-response", MissingResponse);
             errorsMap.put("invalid-input-response", InvalidResponse);
         }
