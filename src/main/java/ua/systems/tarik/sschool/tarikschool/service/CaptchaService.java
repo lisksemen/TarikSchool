@@ -14,14 +14,12 @@ import java.util.regex.Pattern;
 @AllArgsConstructor
 public class CaptchaService {
 
+    private static final Pattern RESPONSE_PATTERN = Pattern.compile("[A-Za-z0-9_-]+");
     private CaptchaConfig captchaSettings;
-
     private RestOperations restTemplate;
 
-    private static final Pattern RESPONSE_PATTERN = Pattern.compile("[A-Za-z0-9_-]+");
-
     public void processResponse(String response, String IP) {
-        if(!responseSanityCheck(response)) {
+        if (!responseSanityCheck(response)) {
             throw new RuntimeException("Response contains invalid characters");
         }
 
@@ -32,7 +30,7 @@ public class CaptchaService {
         GoogleResponse googleResponse = restTemplate.getForObject(verifyUri, GoogleResponse.class);
 
 
-        if(googleResponse == null || !googleResponse.isSuccess()) {
+        if (googleResponse == null || !googleResponse.isSuccess()) {
             throw new RuntimeException("reCaptcha was not successfully validated");
         }
     }

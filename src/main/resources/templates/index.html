@@ -2,22 +2,22 @@
 <html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta charset="UTF-8">
     <title>Наукова школа ім. Сліпченко</title>
-    <meta name="author" content="Tarik Systems">
-    <meta name="description"
-          content="Наукова школа комп’ютерного моніторингу процесів і систем імені Сліпченко є однією з основних засновників нового напрямку в інформації, пов’язаного з автоматизованим проектування процесів і систем та проведенням комп’ютерного моніторингу широкого спектру процесів і систем, зокрема, навколишня середовище, організм людини та технологічні системи.">
+    <meta content="Tarik Systems" name="author">
+    <meta content="Наукова школа комп’ютерного моніторингу процесів і систем імені Сліпченко є однією з основних засновників нового напрямку в інформації, пов’язаного з автоматизованим проектування процесів і систем та проведенням комп’ютерного моніторингу широкого спектру процесів і систем, зокрема, навколишня середовище, організм людини та технологічні системи."
+          name="description">
 
-    <script src="https://kit.fontawesome.com/536c7d32f8.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Proxima+Nova:thin,regular,semibold,bold">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/536c7d32f8.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Proxima+Nova:thin,regular,semibold,bold" rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css"/>
+    <link href="/static/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="style.css" rel="stylesheet"/>
     <script src='https://www.google.com/recaptcha/api.js'></script>
-    <script src="main.js" defer></script>
+    <script defer src="main.js"></script>
 </head>
 
 <body>
@@ -25,32 +25,32 @@
     <div class="navbar">
         <div id="navbar-brand">
             <a href="https://tariktairova.github.io/tarik/">
-                <img src="http://icons.iconarchive.com/icons/sirubico/black-metal/128/Web-b-icon.png" alt="ico">
+                <img alt="ico" src="http://icons.iconarchive.com/icons/sirubico/black-metal/128/Web-b-icon.png">
             </a>
         </div>
         <div class="navbar_buttons">
-            <a id="main_a" href='#'><span
+            <a href='#' id="main_a"><span
                     id="main_txt">Головна</span></a>
-            <a id="team_a" href="#team"><span
+            <a href="#team" id="team_a"><span
                     id="team_txt">Команда</span></a>
-            <a id="projects_a" href='#projects'><span
+            <a href='#projects' id="projects_a"><span
                     id="projects_txt">Проекти</span></a>
-            <a id="services_a" href='#services'><span
+            <a href='#services' id="services_a"><span
                     id="services_txt">Послуги</span></a>
-            <a id="about_a" href='#about'><span
+            <a href='#about' id="about_a"><span
                     id="about_txt">Про нас</span></a>
-            <a id="contacts_a" href='#footer'><span
+            <a href='#footer' id="contacts_a"><span
                     id="contacts_txt">Контакти</span></a>
         </div>
         <div class="dropdown">
-            <div onclick="showDropdown()" class="dropbtn dropdown_container" id="dropdown_button">
+            <div class="dropbtn dropdown_container" id="dropdown_button" onclick="showDropdown()">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
             </div>
         </div>
     </div>
-    <div id="myDropdown" class="dropdown-content">
+    <div class="dropdown-content" id="myDropdown">
         <a href='#main'>Головна</a>
         <a href="#team">Команда</a>
         <a href='#projects'>Проекти</a>
@@ -63,7 +63,7 @@
 <article id="main">
     <div class="video_click" id="video_click">
         <div class="video_click_button" onclick="showVideo()">
-            <img src="images/play-video-button.png" alt="play">
+            <img alt="play" src="images/play-video-button.png">
             <div class="video_click_text">
                 <div>
                     <span>Let me show you Tarik</span>
@@ -74,10 +74,10 @@
             </div>
         </div>
     </div>
-    <iframe id="video" class="video" src="https://www.youtube.com/embed/EoQwsa5ldYo" title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
+    <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="video" frameborder="0"
+            id="video"
+            src="https://www.youtube.com/embed/EoQwsa5ldYo"
+            title="YouTube video player">
 
     </iframe>
 </article>
@@ -124,15 +124,15 @@
 
     <section class="main">
         <div class="container">
-            <h2 id="team_h2" class="title">Наша команда.</h2>
+            <h2 class="title" id="team_h2">Наша команда.</h2>
             <div class="content team-cards">
                 <div class="team-card">
                     <div class="header">
                         <div class="avatar" id="kyryl"></div>
                         <div class="socials">
-                            <a href="https://twitter.com" class="twitter"></a>
-                            <a href="https://facebook.com" class="facebook"></a>
-                            <a href="https://instagram.com" class="instagram"></a>
+                            <a class="twitter" href="https://twitter.com"></a>
+                            <a class="facebook" href="https://facebook.com"></a>
+                            <a class="instagram" href="https://instagram.com"></a>
                         </div>
                     </div>
                     <div class="content">
@@ -148,9 +148,9 @@
                     <div class="header">
                         <div class="avatar" id="maslow"></div>
                         <div class="socials">
-                            <a href="https://twitter.com" class="twitter"></a>
-                            <a href="https://facebook.com" class="facebook"></a>
-                            <a href="https://instagram.com" class="instagram"></a>
+                            <a class="twitter" href="https://twitter.com"></a>
+                            <a class="facebook" href="https://facebook.com"></a>
+                            <a class="instagram" href="https://instagram.com"></a>
                         </div>
                     </div>
                     <div class="content">
@@ -166,9 +166,9 @@
                     <div class="header">
                         <div class="avatar" id="luba"></div>
                         <div class="socials">
-                            <a href="https://twitter.com" class="twitter"></a>
-                            <a href="https://facebook.com" class="facebook"></a>
-                            <a href="https://instagram.com" class="instagram"></a>
+                            <a class="twitter" href="https://twitter.com"></a>
+                            <a class="facebook" href="https://facebook.com"></a>
+                            <a class="instagram" href="https://instagram.com"></a>
                         </div>
                     </div>
                     <div class="content">
@@ -184,9 +184,9 @@
                     <div class="header">
                         <div class="avatar" id="semen"></div>
                         <div class="socials">
-                            <a href="https://twitter.com" class="twitter"></a>
-                            <a href="https://facebook.com" class="facebook"></a>
-                            <a href="https://instagram.com" class="instagram"></a>
+                            <a class="twitter" href="https://twitter.com"></a>
+                            <a class="facebook" href="https://facebook.com"></a>
+                            <a class="instagram" href="https://instagram.com"></a>
                         </div>
                     </div>
                     <div class="content">
@@ -202,9 +202,9 @@
                     <div class="header">
                         <div class="avatar" id="mazur"></div>
                         <div class="socials">
-                            <a href="https://twitter.com" class="twitter"></a>
-                            <a href="https://facebook.com" class="facebook"></a>
-                            <a href="https://instagram.com" class="instagram"></a>
+                            <a class="twitter" href="https://twitter.com"></a>
+                            <a class="facebook" href="https://facebook.com"></a>
+                            <a class="instagram" href="https://instagram.com"></a>
                         </div>
                     </div>
                     <div class="content">
@@ -220,14 +220,14 @@
     </section>
 </article>
 
-<div id="projects" class="perfomance">
-        <h2 class="title">
-            досягнення.
-        </h2>
+<div class="perfomance" id="projects">
+    <h2 class="title">
+        досягнення.
+    </h2>
     <div id="perfomance_data">
         <section>
             <div class="circular_image">
-                <img src="images/cup.png" class="skills_image" alt="">
+                <img alt="" class="skills_image" src="images/cup.png">
             </div>
             <h3>Захищено:</h3>
             <div class="list">
@@ -239,7 +239,7 @@
         </section>
         <section>
             <div class="circular_image">
-                <img src="images/gift.png" class="skills_image" alt="">
+                <img alt="" class="skills_image" src="images/gift.png">
             </div>
             <h3>Отримано:</h3>
             <div class="list">
@@ -252,7 +252,7 @@
         </section>
         <section>
             <div class="circular_image">
-                <img src="images/discussion.png" class="skills_image" alt="">
+                <img alt="" class="skills_image" src="images/discussion.png">
             </div>
             <h3>Опубліковано:</h3>
             <div class="list">
@@ -265,11 +265,11 @@
     </div>
 </div>
 
-<div id="services" class="service_wrapper">
-        <h2 class="title">
-            НАВИЧКИ
-            І ПОСЛУГИ.
-        </h2>
+<div class="service_wrapper" id="services">
+    <h2 class="title">
+        НАВИЧКИ
+        І ПОСЛУГИ.
+    </h2>
     <div class="service">
         <div id="lef_side">
             <div class="wrapper">
@@ -313,7 +313,7 @@
         <div id="side_wrapper">
             <div class="side_text">
                 <div class="img_text">
-                    <img src="images/rocket.png" alt="">
+                    <img alt="" src="images/rocket.png">
                     Lorem ipsum dolor osomi
                 </div>
                 <p class="inside_text">
@@ -327,25 +327,25 @@
             </div>
             <div class="side_text">
                 <div class="img_text">
-                    <img src="images/lock.png" alt="">
+                    <img alt="" src="images/lock.png">
                     <p class="inline_text">Lorem ipsum dolor caput</p>
                 </div>
             </div>
             <div class="side_text">
                 <div class="img_text">
-                    <img src="images/arrow.png" alt="">
+                    <img alt="" src="images/arrow.png">
                     <p class="inline_text">Lorem ipsum dolor caput</p>
                 </div>
             </div>
             <div class="side_text">
                 <div class="img_text">
-                    <img src="images/phone.png" alt="">
+                    <img alt="" src="images/phone.png">
                     <p class="inline_text">Lorem ipsum dolor caput</p>
                 </div>
             </div>
             <div class="side_text">
                 <div class="img_text">
-                    <img src="images/book.png" alt="">
+                    <img alt="" src="images/book.png">
                     <p class="inline_text">Lorem ipsum dolor caput</p>
                 </div>
             </div>
@@ -358,7 +358,7 @@
     <section class="main">
         <div class="about_head">
             <!--                    <h1 class="about_header">Історія</h1>-->
-            <h2 id="about_h2" class="title">Про нас.</h2>
+            <h2 class="title" id="about_h2">Про нас.</h2>
             <div id="about_buran_img">
                 <div id="about_buran_color">
                     <p class="about_p">Наукова школа комп’ютерного моніторингу процесів і систем є однією з
@@ -406,38 +406,38 @@
         <div class="about_container">
             <ul class="about_ul">
                 <li class="about_li hidden">
-                    <img class="about_icon" src="images/software.png" alt="eco monitoring img">
+                    <img alt="eco monitoring img" class="about_icon" src="images/software.png">
                     <p class="about_p listElement  left">Розроблено програмно-інформаційне забезпечення
                         комплексної
                         системи еко-енерго-економічного моніторингу довкілля</p>
                 </li>
                 <li class="about_li hidden">
-                    <img class="about_icon" src="images/veb_img_675_411.png" alt="programer img">
+                    <img alt="programer img" class="about_icon" src="images/veb_img_675_411.png">
                     <p class="about_p listElement right">Розроблено інформаційне та програмне забезпечення
                         регіонального
                         Веб-сайту для збору екологічної інформації</p>
                 </li>
                 <li class="about_li hidden">
-                    <img class="about_icon" src="images/fabric.png" alt="fabric img">
+                    <img alt="fabric img" class="about_icon" src="images/fabric.png">
                     <p class="about_p listElement left">Розроблено програми для моделювання розповсюдження
                         забруднювачів
                         у атмосфері</p>
                 </li>
                 <li class="about_li hidden">
-                    <img class="about_icon" src="images/polution.png" alt="polution img">
+                    <img alt="polution img" class="about_icon" src="images/polution.png">
                     <p class="about_p listElement right">Розроблено систему підтримки рішень <cite><a
                             class="about_a"
                             href="http://www.dss-lab.org.ua/rus/Solon-2_Details.htm">«СОЛОН-2»</a></cite>
                     </p>
                 </li>
                 <li class="about_li hidden">
-                    <img class="about_icon" src="images/human.png" alt="human img">
+                    <img alt="human img" class="about_icon" src="images/human.png">
                     <p class="about_p listElement left">Розроблено низку методичних рекомендацій щодо
                         нейтралізації
                         негативних наслідків впливу екологічного забруднення на здоров’я людини</p>
                 </li>
                 <li class="about_li hidden">
-                    <img class="about_icon" src="images/computer_science.png" alt="computer_science img">
+                    <img alt="computer_science img" class="about_icon" src="images/computer_science.png">
                     <p class="about_p listElement right">Вперше на Україні відкрито спеціальність
                         «Комп`ютерний
                         еколого-економічний моніторинг» в напрямку «Комп’ютерні науки» (нині спеціальність
@@ -446,18 +446,18 @@
                     </p>
                 </li>
                 <li class="about_li hidden">
-                    <img class="about_icon" src="images/mountain-climbing-icon.png" alt="mountain-climbing img">
+                    <img alt="mountain-climbing img" class="about_icon" src="images/mountain-climbing-icon.png">
                     <p class="about_p listElement left">Розроблено лікувально-діагностичний апарат <cite><a
                             class="about_a" href="http://apeps.kpi.ua/medicine">«ГІПОТРОН»</a></cite>
                     </p>
                 </li>
                 <li class="about_li hidden">
-                    <img class="about_icon" src="images/water-heating.png" alt="water-heating img">
+                    <img alt="water-heating img" class="about_icon" src="images/water-heating.png">
                     <p class="about_p listElement right">Розроблено систему автоматизованого проектування
                         водонагрівачів</p>
                 </li>
                 <li class="about_li hidden">
-                    <img class="about_icon" src="images/energy.png" alt="water-heating img">
+                    <img alt="water-heating img" class="about_icon" src="images/energy.png">
                     <p class="about_p listElement left">Розроблено нову конструкцію контактних
                         водонагрівачів, що дають
                         20-30% економії електроенергії</p>
@@ -468,18 +468,18 @@
 </article>
 <footer class="footer" id="footer">
     <section class="section_footer" id="section_footer">
-        <h2 id = "footer_h2" class="title">Зв'язатись з нами.</h2>
-        <button class="button_show" type="button" value="showTextarea" id="btnQ"
-                onclick="showQ()">&#10068;Задати
+        <h2 class="title" id="footer_h2">Зв'язатись з нами.</h2>
+        <button class="button_show" id="btnQ" onclick="showQ()" type="button"
+                value="showTextarea">&#10068;Задати
             питання
         </button>
-        <button class="button_show" type="button" value="showTextarea" id="btnP"
-                onclick="showP()">&#9742;Замовити
+        <button class="button_show" id="btnP" onclick="showP()" type="button"
+                value="showTextarea">&#9742;Замовити
             дзвінок
         </button>
         <section class="section_contact">
             <figure class="figure">
-                <iframe class="iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                <iframe class="iframe" frameborder="0" marginheight="0" marginwidth="0" scrolling="no"
                         src="https://maps.google.com/maps?width=100%25&amp;hl=en&amp;q=Kyiv%20Polytechnic%20Institute%20Park,%20Peremohy%20Avenue,%20Kyiv,%20Ukraine+(Science%20School)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
                     <a href="https://www.maps.ie/distance-area-calculator.html">distance maps</a>
                 </iframe>
@@ -487,26 +487,26 @@
                 <figcaption class="nowrap">Тел:+380994888099</figcaption>
                 <figcaption class="nowrap">E-mail:pupas@gmail.com</figcaption>
             </figure>
-            <form class="formContact" method="post" id="formContact" action="/contact">
-                <input class="formContact_input" type="name" name="username" placeholder="👤ПІБ">
-                <input class="formContact_input" type="tel" name="userphone" placeholder="📱+38**********">
-                <input class="formContact_input" type="email" name="useremail" placeholder="✉Email">
+            <form action="/contact" class="formContact" id="formContact" method="post">
+                <input class="formContact_input" name="username" placeholder="👤ПІБ" type="name">
+                <input class="formContact_input" name="userphone" placeholder="📱+38**********" type="tel">
+                <input class="formContact_input" name="useremail" placeholder="✉Email" type="email">
                 <textarea class="formContext_textarea" name="message" placeholder="✎Повідомлення"></textarea>
                 <div class="g-recaptcha col-sm-5"
                      th:attr="data-sitekey=${@captchaConfig.getSite()}"></div>
-                <span id="captchaError" class="alert alert-danger col-sm-4"
+                <span class="alert alert-danger col-sm-4" id="captchaError"
                       style="display:none"></span>
                 <button class="button_submit" form="formContact"
                         value="Submit">&#9745;Відправити
                 </button>
             </form>
-            <form method="post" class="form_feedback" id="formFeedback" action="/callback">
-                <input class="formFeedback_input" type="name" name="username" placeholder="👤ПІБ" required>
-                <input class="formFeedback_input" type="tel" name="userphone" placeholder="📱+38**********"
-                       required>
+            <form action="/callback" class="form_feedback" id="formFeedback" method="post">
+                <input class="formFeedback_input" name="username" placeholder="👤ПІБ" required type="name">
+                <input class="formFeedback_input" name="userphone" placeholder="📱+38**********" required
+                       type="tel">
                 <div class="g-recaptcha col-sm-5"
                      th:attr="data-sitekey=${@captchaConfig.getSite()}"></div>
-                <span id="captchaError2" class="alert alert-danger col-sm-4"
+                <span class="alert alert-danger col-sm-4" id="captchaError2"
                       style="display:none"></span>
                 <button class="button_submit" form="formFeedback" value="Submit">&#9745;Відправити
                 </button>
@@ -536,7 +536,7 @@
             <br>
             <span>Designed by Tarik Systems</span>
         </p>
-        <a href="#" class="arrow center">︿</a>
+        <a class="arrow center" href="#">︿</a>
     </section>
 </footer>
 </body>
