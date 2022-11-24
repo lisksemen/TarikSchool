@@ -1,1 +1,1 @@
-SOLO
+tarik-systems.herokuapp.com
