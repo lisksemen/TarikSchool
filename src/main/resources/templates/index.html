@@ -470,12 +470,10 @@
     <section class="section_footer" id="section_footer">
         <h2 class="title" id="footer_h2">Зв'язатись з нами.</h2>
         <button class="button_show" id="btnQ" onclick="showQ()" type="button"
-                value="showTextarea">&#10068;Задати
-            питання
+                value="showTextarea">&#10068;Замовити
         </button>
-        <button class="button_show" id="btnP" onclick="showP()" type="button"
-                value="showTextarea">&#9742;Замовити
-            дзвінок
+        <button class="button_show button_show_phone" id="btnP" onclick="showP()" type="button"
+                value="showTextarea">&#128222;
         </button>
         <section class="section_contact">
             <figure class="figure">
@@ -487,23 +485,22 @@
                 <figcaption class="nowrap">Тел:+380994888099</figcaption>
                 <figcaption class="nowrap">E-mail:pupas@gmail.com</figcaption>
             </figure>
-            <form action="/contact" class="formContact" id="formContact" method="post">
-                <input class="formContact_input" name="username" placeholder="👤ПІБ" type="name">
-                <input class="formContact_input" name="userphone" placeholder="📱+38**********" type="tel">
-                <input class="formContact_input" name="useremail" placeholder="✉Email" type="email">
-                <textarea class="formContext_textarea" name="message" placeholder="✎Повідомлення"></textarea>
+            <form action="/order" class="order_form" id="order_form" method="post">
+                <input class="order_input" name="username" placeholder="👤ПІБ" type="name">
+                <input class="order_input" name="userphone" placeholder="📱+38**********" type="tel">
+                <input class="order_input" name="usermail" placeholder="✉Email" type="email">
+                <textarea class="orderForm_textarea" name="message" placeholder="✎Залишити коментарій до замовлення"></textarea>
                 <div class="g-recaptcha col-sm-5"
                      th:attr="data-sitekey=${@captchaConfig.getSite()}"></div>
                 <span class="alert alert-danger col-sm-4" id="captchaError"
                       style="display:none"></span>
-                <button class="button_submit" form="formContact"
+                <button class="button_submit" form="order_form"
                         value="Submit">&#9745;Відправити
                 </button>
             </form>
             <form action="/callback" class="form_feedback" id="formFeedback" method="post">
                 <input class="formFeedback_input" name="username" placeholder="👤ПІБ" required type="name">
-                <input class="formFeedback_input" name="userphone" placeholder="📱+38**********" required
-                       type="tel">
+                <input class="formFeedback_input" name="userphone" placeholder="📱+38**********" required type="tel">
                 <div class="g-recaptcha col-sm-5"
                      th:attr="data-sitekey=${@captchaConfig.getSite()}"></div>
                 <span class="alert alert-danger col-sm-4" id="captchaError2"
@@ -515,22 +512,15 @@
         <div class="container_icons">
             <a class="footer_a" href=""><img alt="facebook" class="social_icon"
                                              src="images/facebook_icon.png"></a>
-            <a class="footer_a" href=""><img alt="telegram" class="social_icon"
-                                             src="images/telegram_icon.png"></a>
+            <a class="footer_a" href="">
+                <img alt="telegram" class="social_icon" src="images/telegram_icon.png">
+            </a>
             <a class="footer_a" href=""><img alt="instagram" class="social_icon"
                                              src="images/instagram_icon.png"></a>
             <a class="footer_a" href=""><img alt="viber" class="social_icon" src="images/viber_icon.png"></a>
         </div>
     </section>
     <section class="footer_bottom">
-        <!--                <section class="bottom_menu center">-->
-        <!--                    <a class="footer_a" href="">Головна</a>-->
-        <!--                    <a class="footer_a" href="">Історія</a>-->
-        <!--                    <a class="footer_a" href="">Команда</a>-->
-        <!--                    <a class="footer_a" href="">Проекти</a>-->
-        <!--                    <a class="footer_a" href="">Показники результативності</a>-->
-        <!--                    <a class="footer_a" href="">Послуги</a>-->
-        <!--                </section>-->
         <p class="center footer_company">
             <span class="nowrap">Copyright &copy; 2022</span>
             <br>
