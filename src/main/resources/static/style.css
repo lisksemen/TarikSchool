@@ -200,7 +200,7 @@ body {
     border-bottom: 4px solid black;
 }
 
-.formContact_input {
+.order_input {
     font-family: inherit;
     outline: none;
     padding: 10px;
@@ -229,15 +229,20 @@ body {
 }
 
 
-.formContact {
+.order_form {
     grid-area: form;
 }
 
 .form_feedback {
+    position: fixed;
+    bottom: 17vh;
+    right: 20px;
+    margin: 5px;
     grid-area: form;
+    box-shadow: 10px 5px 5px #222;
 }
 
-.formContact, .form_feedback {
+.order_form, .form_feedback {
     display: none;
     margin: 5px;
     font-family: inherit;
@@ -468,7 +473,7 @@ body {
 }
 
 
-.formContext_textarea {
+.orderForm_textarea {
     font-family: inherit;
     border: none;
     border-bottom: solid black 2px;
@@ -510,7 +515,18 @@ body {
     border: none;
     border-bottom: solid black 1px;
 }
+.button_show_phone{
+    border-radius: 15px;
+    font-size: 25px;
+}
 
+#btnP{
+    z-index: 1000000;
+    position: fixed;
+    right: 40px;
+    bottom: 10vh;
+    background: #42b8dd;
+}
 
 .social_icon {
     border-radius: var(--BR);
@@ -1058,6 +1074,7 @@ html {
     margin: var(--M) 0;
 }
 
+
 @media (max-width: 936px) {
     #perfomance_data section {
         margin-top: 3vw;;
@@ -1115,6 +1132,9 @@ html {
         margin: 3vw;
     }
 }
+
+
+
 
 @media (max-width: 450px) {
     .circular_image, .service_circle {

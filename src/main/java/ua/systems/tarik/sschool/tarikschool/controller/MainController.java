@@ -37,14 +37,14 @@ public class MainController {
         return "index";
     }
 
-    @PostMapping("/contact")
-    public ResponseEntity<?> proceedContactFormAndShowIndex(@RequestParam String username,
-                                                            @RequestParam("userphone") String userPhone,
-                                                            @RequestParam("useremail") String userEmail,
-                                                            @RequestParam String message,
-                                                            @RequestParam("g-recaptcha-response") String recaptcha,
-                                                            @RequestHeader(value = "User-Agent") String userAgent,
-                                                            HttpServletRequest request) {
+    @PostMapping("/order")
+    public ResponseEntity<?> proceedOrderFormAndShowIndex(@RequestParam String username,
+                                                          @RequestParam("userphone") String userPhone,
+                                                          @RequestParam("usermail") String userEmail,
+                                                          @RequestParam String message,
+                                                          @RequestParam("g-recaptcha-response") String recaptcha,
+                                                          @RequestHeader(value = "User-Agent") String userAgent,
+                                                          HttpServletRequest request) {
 
         String IP = request.getRemoteAddr();
         captchaService.processResponse(recaptcha, IP);
